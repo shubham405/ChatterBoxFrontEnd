@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {  Routes, Route } from 'react-router-dom';
+import HomePage from './Pages/HomePage'; // Update with the correct path
+import ChatsPage from './Pages/ChatPage'; // Update with the correct path
+// const TestComponent = () => <h1>Test Component Loaded</h1>;
 
-function App() {
+// const App = () => {
+  
+//   return (
+//     <Routes>
+      
+//       <Route path="/" element={<TestComponent />} />
+//       {/* <Route path="/chats" element={<ChatsPage />} /> */}
+//     </Routes>
+//   );
+// };
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/chats" element={<ChatsPage />} />
+      </Routes>
+      </div>
+   
   );
 }
 
